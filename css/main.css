@@ -9,6 +9,14 @@ ul {
     margin-bottom: 0;
 }
 
+.main-color {
+    color: #25a31d;
+}
+
+.btn-main-color {
+    background: #25a31d;
+}
+
 .banner {
     min-height: 100vh;
 }

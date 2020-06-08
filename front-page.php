@@ -1,9 +1,9 @@
 <?php get_header('home'); ?>
 <div class="banner-wrapper container">
     <div class="banner-text">
-        <h3><?php bloginfo('description') ?></h3>
+        <h3 class="main-color"><?php bloginfo('description') ?></h3>
         <p><?php echo get_theme_mod('bannerText'); ?></p>
-        <button class="btn btn-info">GET HELP</button>
+        <button class="btn btn-main-color">GET HELP</button>
     </div>
     <div class="banner-image">
         <h1>Image</h1>
