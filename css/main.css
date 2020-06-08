@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p,
+ul {
+    margin-bottom: 0;
+}
+
+.banner {
+    min-height: 100vh;
+}
+
+.banner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15vh;
+}
+
+.banner-text,
+.banner-image {
+    flex: 1;
+}
+
+.banner-image {
+    text-align: center;
+}
