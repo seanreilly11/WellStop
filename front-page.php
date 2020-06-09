@@ -1,7 +1,7 @@
 <?php get_header('home'); ?>
 <div class="banner-wrapper container">
     <div class="banner-text">
-        <h3 class="main-color"><?php bloginfo('description') ?></h3>
+        <h2 class="main-color"><?php bloginfo('description') ?></h2>
         <p><?php echo get_theme_mod('bannerText'); ?></p>
         <button class="btn btn-main-color">GET HELP</button>
     </div>
