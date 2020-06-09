@@ -2,8 +2,8 @@
 <div class="banner-wrapper container">
     <div class="banner-text">
         <h2 class="main-color"><?php bloginfo('description') ?></h2>
-        <p><?php echo get_theme_mod('bannerText'); ?></p>
-        <button class="btn btn-main-color">GET HELP</button>
+        <p class="banner-text-padded"><?php echo get_theme_mod('bannerText'); ?></p>
+        <a href="#" class="btn btn-main-color">GET HELP NOW</a>
     </div>
     <div class="banner-image">
         <h1>Image</h1>

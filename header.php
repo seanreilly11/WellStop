@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header class="py-3 bg-light">
+    <header class="py-3 bg-transparent">
         <div class="container d-flex justify-content-between align-items-center">
             <a href="<?php echo get_home_url(); ?>">
                 <!-- <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="Logo"> -->

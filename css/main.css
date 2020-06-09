@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Muli:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Roboto:wght@400;600;700&display=swap");
 
 * {
     padding: 0;
@@ -6,8 +6,12 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 100%;
+}
+
 body {
-    font-family: "Muli", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 h1,
@@ -20,6 +24,8 @@ button,
 .btn {
     font-family: "Lora", serif;
     font-weight: 600;
+    margin-bottom: 0;
+    color: #25a31d;
 }
 
 p,
@@ -33,6 +39,8 @@ ul {
 
 .btn-main-color {
     background: #25a31d;
+    color: #fff;
+    font-size: 1.2rem;
 }
 
 .banner {
@@ -53,4 +61,17 @@ ul {
 
 .banner-image {
     text-align: center;
+}
+
+.banner-text-padded {
+    margin: 0.5rem 0;
+}
+
+#menu-top-menu {
+    list-style: none;
+    display: flex;
+}
+
+#menu-top-menu li {
+    padding: 0 1rem;
 }
