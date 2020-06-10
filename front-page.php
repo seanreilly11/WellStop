@@ -8,6 +8,8 @@
 </div>
 </div>
 <div class="container">
-    <?php get_template_part('includes/section', 'content'); ?>
+    <div class="py-5">
+        <?php get_template_part('includes/section', 'content'); ?>
+    </div>
 </div>
 <?php get_footer(); ?>

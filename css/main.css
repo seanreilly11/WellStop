@@ -113,6 +113,10 @@ ul {
     width: auto;
 }
 
+.page-title {
+    margin-bottom: 1rem;
+}
+
 /* media queries */
 @media (min-width: 768px) {
     .banner-text {
