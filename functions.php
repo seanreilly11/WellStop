@@ -24,6 +24,7 @@ add_action("wp_enqueue_scripts", "load_js");
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
 add_theme_support('widgets');
+add_theme_support('custom-logo');
 
 // Menus
 register_nav_menus(
@@ -72,12 +73,12 @@ function my_sidebars()
 add_action('widgets_init', 'my_sidebars');
 
 // custom post type
-function add_animals_post()
+function add_locations_post()
 {
     $args = array(
         'labels' => array(
-            'name' => 'Animals',
-            'singular_name' => 'Animals',
+            'name' => 'Locations',
+            'singular_name' => 'Location',
         ),
         'hierarchical' => true, //boolean value toggles between pages & posts without labels
         'menu_icon' => 'dashicons-carrot',
@@ -85,27 +86,27 @@ function add_animals_post()
         'has_archive' => true,
         'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
     );
-    register_post_type('animals', $args);
+    register_post_type('locations', $args);
 }
 
-add_action('init', 'add_animals_post');
+add_action('init', 'add_locations_post');
 
 // custom taxonomy
-function animals_taxonomy()
+function locations_taxonomy()
 {
     $args = array(
         'labels' => array(
-            'name' => 'Families',
-            'singular_name' => 'Family',
+            'name' => 'Services',
+            'singular_name' => 'Service',
         ),
         'hierarchical' => true, //boolean value toggles between pages & posts without labels
         'public' => true,
 
     );
-    register_taxonomy('families', array('animals'), $args);
+    register_taxonomy('services', array('locations'), $args);
 }
 
-add_action('init', 'animals_taxonomy');
+add_action('init', 'locations_taxonomy');
 
 // customise api
 require_once get_template_directory() . '/customizer.php';

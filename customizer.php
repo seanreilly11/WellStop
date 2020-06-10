@@ -4,12 +4,12 @@ function mytheme_customize_register($wp_customize)
 {
     // Background Colour
     $wp_customize->add_setting('backgroundColour', array(
-        'default'   => '#ffffff',
+        'default'   => '#fcfcfc',
         'transport' => 'refresh',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'backgroundColourControl', array(
-        'label'      => __('Background Colour', 'gardenTheme'),
+        'label'      => __('Background Colour', 'customTheme'),
         'description' => 'Change the background Colour',
         'section'    => 'colors',
         'settings'   => 'backgroundColour',
@@ -22,7 +22,7 @@ function mytheme_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'textColourControl', array(
-        'label'      => __('Text Colour', 'gardenTheme'),
+        'label'      => __('Text Colour', 'customTheme'),
         'description' => 'Change the Text Colour',
         'section'    => 'colors',
         'settings'   => 'textColour',
@@ -30,12 +30,12 @@ function mytheme_customize_register($wp_customize)
 
     // header backgroundColour
     $wp_customize->add_setting('headerColour', array(
-        'default'   => '#ffffff',
+        'default'   => '#fcfcfc',
         'transport' => 'refresh',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'headerColourControl', array(
-        'label'      => __('Header Background Colour', 'gardenTheme'),
+        'label'      => __('Header Background Colour', 'customTheme'),
         'description' => 'Change the Header Background Colour',
         'section'    => 'colors',
         'settings'   => 'headerColour',
@@ -48,7 +48,7 @@ function mytheme_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'headerTextColourControl', array(
-        'label'      => __('Header Menu Text Colour', 'gardenTheme'),
+        'label'      => __('Header Menu Text Colour', 'customTheme'),
         'description' => 'Change the Header Menu Text Colour',
         'section'    => 'colors',
         'settings'   => 'headerTextColour',
@@ -56,12 +56,12 @@ function mytheme_customize_register($wp_customize)
 
     // header menu hover color
     $wp_customize->add_setting('headerMenuHoverColour', array(
-        'default'   => '#3cb42c',
+        'default'   => '#25a31d',
         'transport' => 'refresh',
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'headerMenuHoverColourControl', array(
-        'label'      => __('Header Menu Hover Colour', 'gardenTheme'),
+        'label'      => __('Header Menu Hover Colour', 'customTheme'),
         'description' => 'Change the Header Menu Hover Colour',
         'section'    => 'colors',
         'settings'   => 'headerMenuHoverColour',
@@ -74,7 +74,7 @@ function mytheme_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'footerColourControl', array(
-        'label'      => __('Footer Background Colour', 'gardenTheme'),
+        'label'      => __('Footer Background Colour', 'customTheme'),
         'description' => 'Change the Footer Background Colour',
         'section'    => 'colors',
         'settings'   => 'footerColour',
@@ -87,7 +87,7 @@ function mytheme_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'footerTextColourControl', array(
-        'label'      => __('Footer Text Colour', 'gardenTheme'),
+        'label'      => __('Footer Text Colour', 'customTheme'),
         'description' => 'Change the Footer Text Colour',
         'section'    => 'colors',
         'settings'   => 'footerTextColour',
@@ -100,7 +100,7 @@ function mytheme_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'footerMenuHoverColourControl', array(
-        'label'      => __('Footer Menu Hover Colour', 'gardenTheme'),
+        'label'      => __('Footer Menu Hover Colour', 'customTheme'),
         'description' => 'Change the Footer Menu Hover Colour',
         'section'    => 'colors',
         'settings'   => 'footerMenuHoverColour',
@@ -108,7 +108,7 @@ function mytheme_customize_register($wp_customize)
 
     // Create text section
     $wp_customize->add_section('text', array(
-        'title'      => __('Text', 'gardenTheme'),
+        'title'      => __('Text', 'customTheme'),
         'priority'   => 30,
     ));
 
@@ -119,7 +119,7 @@ function mytheme_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bannerTextControl', array(
-        'label'      => __('Banner Text', 'gardenTheme'),
+        'label'      => __('Banner Text', 'customTheme'),
         'section'    => 'text',
         'settings'   => 'bannerText',
     )));
@@ -131,7 +131,7 @@ function mytheme_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'footerMessageControl', array(
-        'label'      => __('Footer Text', 'gardenTheme'),
+        'label'      => __('Footer Text', 'customTheme'),
         'section'    => 'text',
         'settings'   => 'footerMessage',
     )));
@@ -145,21 +145,21 @@ function mytheme_customize_css()
 ?>
     <style type="text/css">
         body {
-            background-color: <?php echo get_theme_mod('backgroundColour', '#ffffff'); ?> !important;
+            background-color: <?php echo get_theme_mod('backgroundColour', '#fcfcfc'); ?> !important;
             color: <?php echo get_theme_mod('textColour', '#000000'); ?> !important;
         }
 
         header {
-            background-color: <?php echo get_theme_mod('headerColour', '#ffffff'); ?> !important;
+            background-color: <?php echo get_theme_mod('headerColour', '#fcfcfc'); ?> !important;
         }
 
-        #menu-top-menu li a {
+        #menu-top-menu li.menu-item-object-page a {
             color: <?php echo get_theme_mod('headerTextColour', '#000000'); ?> !important;
         }
 
         #menu-top-menu .current-menu-item::after,
-        #menu-top-menu li:hover::after {
-            background: <?php echo get_theme_mod('headerMenuHoverColour', '#3cb42c'); ?> !important;
+        #menu-top-menu li.menu-item-object-page:hover::after {
+            background: <?php echo get_theme_mod('headerMenuHoverColour', '#25a31d'); ?> !important;
         }
 
         footer {
