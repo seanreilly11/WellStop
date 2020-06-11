@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php the_title() ?> - <?php bloginfo('name') ?></title>
+    <title><?php if (single_cat_title()) :
+                single_cat_title();
+            elseif (post_type_archive_title()) :
+                post_type_archive_title();
+            endif; ?> - <?php bloginfo('name') ?></title>
     <?php wp_head(); ?>
 </head>
 

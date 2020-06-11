@@ -53,15 +53,6 @@ function my_sidebars()
 
     register_sidebar(
         array(
-            'name' => 'Home Sidebar',
-            'id' => 'home-sidebar',
-            'before_title' => '<h4 class="widget-title">',
-            'after_title' => '</h4>'
-        )
-    );
-
-    register_sidebar(
-        array(
             'name' => 'Footer Sidebar',
             'id' => 'footer-sidebar',
             'before_title' => '<h4 class="widget-title">',
@@ -81,7 +72,7 @@ function add_locations_post()
             'singular_name' => 'Location',
         ),
         'hierarchical' => true, //boolean value toggles between pages & posts without labels
-        'menu_icon' => 'dashicons-carrot',
+        'menu_icon' => 'dashicons-admin-site-alt2',
         'public' => true,
         'has_archive' => true,
         'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),

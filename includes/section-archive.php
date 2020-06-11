@@ -13,7 +13,7 @@ if (have_posts()) :
         the_excerpt(); //cut of some portion of text
         ?>
 
-        <a href="<?php the_permalink(); ?>"> Read more </a>
+        <a href="<?php the_permalink(); ?>">Read more</a>
 <?php endwhile;
 else :
 endif;

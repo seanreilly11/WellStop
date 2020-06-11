@@ -1,12 +1,10 @@
 <footer class="p-5">
-    <div class="d-flex justify-content-around align-items-center flex-column flex-md-row-reverse">
-        <div class="footer-menu">
-            <?php if (is_active_sidebar('footer-sidebar')) :
-                dynamic_sidebar('footer-sidebar');
-            endif; ?>
-        </div>
-        <p class="mb-0"><?php echo get_theme_mod('footerMessage'); ?></p>
+    <div class="footer-group container">
+        <?php if (is_active_sidebar('footer-sidebar')) :
+            dynamic_sidebar('footer-sidebar');
+        endif; ?>
     </div>
+    <p class="mt-5 text-center">&copy; 2020 <a href="http://seanreilly11.github.io" target="_blank">Sean Reilly</a></p>
 </footer>
 <?php wp_footer(); ?>
 </body>

@@ -63,6 +63,7 @@ ul {
     margin: 0.5rem 0;
 }
 
+/* top nav */
 #menu-top-menu {
     list-style: none;
     display: flex;
@@ -117,10 +118,38 @@ ul {
     margin-bottom: 1rem;
 }
 
+.widget {
+    list-style: none;
+}
+
+/* footer */
+.footer-group {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.product-categories {
+    list-style: none;
+}
+
+/* footer nav */
+#pages-2 ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#pages-2 ul li {
+    padding-right: 0.55rem;
+}
+
 /* media queries */
 @media (min-width: 768px) {
     .banner-text {
         width: 70%;
+    }
+    .footer-group {
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     }
 }
 

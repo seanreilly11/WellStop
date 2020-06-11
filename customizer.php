@@ -69,7 +69,7 @@ function mytheme_customize_register($wp_customize)
 
     // footer backgroundColour
     $wp_customize->add_setting('footerColour', array(
-        'default'   => '#343a40',
+        'default'   => '#eee',
         'transport' => 'refresh',
     ));
 
@@ -82,7 +82,7 @@ function mytheme_customize_register($wp_customize)
 
     // footer text color
     $wp_customize->add_setting('footerTextColour', array(
-        'default'   => '#f8f9fa',
+        'default'   => '#000000',
         'transport' => 'refresh',
     ));
 
@@ -91,19 +91,6 @@ function mytheme_customize_register($wp_customize)
         'description' => 'Change the Footer Text Colour',
         'section'    => 'colors',
         'settings'   => 'footerTextColour',
-    )));
-
-    // footer menu hover color
-    $wp_customize->add_setting('footerMenuHoverColour', array(
-        'default'   => '#333',
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'footerMenuHoverColourControl', array(
-        'label'      => __('Footer Menu Hover Colour', 'customTheme'),
-        'description' => 'Change the Footer Menu Hover Colour',
-        'section'    => 'colors',
-        'settings'   => 'footerMenuHoverColour',
     )));
 
     // Create text section
@@ -122,18 +109,6 @@ function mytheme_customize_register($wp_customize)
         'label'      => __('Banner Text', 'customTheme'),
         'section'    => 'text',
         'settings'   => 'bannerText',
-    )));
-
-    // Footer Message
-    $wp_customize->add_setting('footerMessage', array(
-        'default'   => '&copy; 2020',
-        'transport' => 'refresh',
-    ));
-
-    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'footerMessageControl', array(
-        'label'      => __('Footer Text', 'customTheme'),
-        'section'    => 'text',
-        'settings'   => 'footerMessage',
     )));
 }
 
@@ -163,16 +138,12 @@ function mytheme_customize_css()
         }
 
         footer {
-            background-color: <?php echo get_theme_mod('footerColour', '#343a40'); ?> !important;
+            background-color: <?php echo get_theme_mod('footerColour', '#eee'); ?> !important;
         }
 
         footer p,
-        #menu-top-menu-1 li a {
-            color: <?php echo get_theme_mod('footerTextColour', '#f8f9fa'); ?> !important;
-        }
-
-        #menu-top-menu-1 li:hover {
-            background: <?php echo get_theme_mod('footerMenuHoverColour', '#f8f9fa'); ?> !important;
+        footer a {
+            color: <?php echo get_theme_mod('footerTextColour', '#000000'); ?> !important;
         }
     </style>
 <?php
