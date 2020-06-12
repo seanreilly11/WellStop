@@ -19,9 +19,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-button,
-.btn {
+h6 {
     font-family: "Lora", serif;
     font-weight: 600;
     margin-bottom: 0;
@@ -120,6 +118,10 @@ ul {
 
 .widget {
     list-style: none;
+}
+
+.paragraph ul {
+    margin-left: 20px;
 }
 
 /* footer */

@@ -128,12 +128,12 @@ function mytheme_customize_css()
             background-color: <?php echo get_theme_mod('headerColour', '#fcfcfc'); ?> !important;
         }
 
-        #menu-top-menu li.menu-item-object-page a {
+        #menu-top-menu li a {
             color: <?php echo get_theme_mod('headerTextColour', '#000000'); ?> !important;
         }
 
         #menu-top-menu .current-menu-item::after,
-        #menu-top-menu li.menu-item-object-page:hover::after {
+        #menu-top-menu li:hover::after {
             background: <?php echo get_theme_mod('headerMenuHoverColour', '#25a31d'); ?> !important;
         }
 

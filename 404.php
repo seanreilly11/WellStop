@@ -1,26 +1,14 @@
 <?php get_header(); ?>
-<div id="primary" class="content-area row  container m-auto my-5">
-    <div id="content" class="site-content col-lg-9" role="main">
-        <header class="page-header bg-white">
-            <h3 class="page-title  text-dark">Page not found</h3>
-        </header>
-
-        <div class="page-wrapper ">
-            <div class="page-content">
-
-                <h4 class="text-info my-5"> It looks like nothing was found at this location. Maybe try a search?</h4>
-                <?php get_search_form(); ?>
-            </div>
-        </div>
+<div class="row container mx-auto px-0 pb-3">
+    <div class="col-12 col-md-9">
+        <h1 class="page-title">Page not found</h1>
+        <h4 class="text-info my-5"> It looks like nothing was found at this location. Maybe try a search?</h4>
+        <?php get_search_form(); ?>
     </div>
-
-    <!-- Sidebar -->
-    <div class="col-lg-3 widget">
-
-        <?php if (is_active_sidebar('blog-sidebar')) : ?>
-            <?php dynamic_sidebar('blog-sidebar'); ?>
-
-        <?php endif; ?>
+    <div class="col-12 col-md-3 widget">
+        <?php if (is_active_sidebar('page-sidebar')) :
+            dynamic_sidebar('page-sidebar');
+        endif; ?>
     </div>
 </div>
 <?php get_footer(); ?>
