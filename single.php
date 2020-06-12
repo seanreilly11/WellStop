@@ -10,4 +10,4 @@
         endif; ?>
     </div>
 </div>
-<?php get_footer(); ?>d
+<?php get_footer(); ?>
