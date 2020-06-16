@@ -11,7 +11,7 @@
     <div class="py-5">
         <?php get_template_part('includes/section', 'content'); ?>
         <div class="mt-5 text-center">
-            <button class="btn btn-lg btn-main-color btn-block">Donate</button>
+            <a class="btn btn-lg btn-main-color btn-block" href="donate">Donate</a>
         </div>
     </div>
 

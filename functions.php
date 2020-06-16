@@ -87,14 +87,14 @@ function locations_taxonomy()
 {
     $args = array(
         'labels' => array(
-            'name' => 'Services',
-            'singular_name' => 'Service',
+            'name' => 'Regions',
+            'singular_name' => 'Region',
         ),
         'hierarchical' => true, //boolean value toggles between pages & posts without labels
         'public' => true,
 
     );
-    register_taxonomy('services', array('locations'), $args);
+    register_taxonomy('regions', array('locations'), $args);
 }
 
 add_action('init', 'locations_taxonomy');
