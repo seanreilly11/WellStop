@@ -1,4 +1,11 @@
 <?php
+// load font awesome
+function load_fa()
+{
+    wp_enqueue_script('fa', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js', array(), '1.0.0', true);
+}
+
+add_action('wp_enqueue_scripts', 'load_fa');
 
 // load css
 function load_css()

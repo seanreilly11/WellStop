@@ -5,8 +5,13 @@ if (have_posts()) :
         the_content();
         $terms = get_the_terms($post->ID, 'regions');
         if ($terms) :
-            foreach ($terms as $term) {
-                echo "<p>Region: " . $term->name . "</p>";
+            foreach ($terms as $term) { ?>
+
+                <a class="text-dark" href="<?php echo get_term_link($term->term_id, 'regions'); ?>">
+                    <?php echo "<p>Region: " . $term->name . "</p>"; //go and add single_cat_title() in archive 
+                    ?>
+                </a>
+            <?php
             }
         endif;
         $categories = get_the_category();

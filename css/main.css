@@ -124,6 +124,15 @@ ul {
     margin-left: 20px;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.contact-item {
+    border: 1px solid black;
+}
+
 /* footer */
 .footer-group {
     display: grid;
