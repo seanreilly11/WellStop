@@ -110,6 +110,18 @@ function mytheme_customize_register($wp_customize)
         'section'    => 'text',
         'settings'   => 'bannerText',
     )));
+
+    // Banner button
+    $wp_customize->add_setting('bannerBtn', array(
+        'default'   => 'GET HELP NOW',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bannerBtnControl', array(
+        'label'      => __('Banner Button Text', 'customTheme'),
+        'section'    => 'text',
+        'settings'   => 'bannerBtn',
+    )));
 }
 
 add_action('customize_register', 'mytheme_customize_register');

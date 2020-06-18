@@ -3,7 +3,7 @@
     <div class="banner-text">
         <h2><?php bloginfo('description') ?></h2>
         <p class="banner-text-padded"><?php echo get_theme_mod('bannerText'); ?></p>
-        <a href="contact" class="btn btn-main-color">GET HELP NOW</a>
+        <a href="contact" class="btn btn-main-color"><?php echo get_theme_mod('bannerBtn'); ?></a>
     </div>
 </div>
 </div>
