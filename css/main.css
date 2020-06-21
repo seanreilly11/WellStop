@@ -133,6 +133,16 @@ ul {
     border: 1px solid black;
 }
 
+.col-left {
+    float: left;
+    width: 48%;
+}
+
+.col-right {
+    float: right;
+    width: 48%;
+}
+
 /* footer */
 .footer-group {
     display: grid;
